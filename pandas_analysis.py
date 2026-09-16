@@ -5,6 +5,8 @@ df = pd.read_csv("data/sales_data.csv")
 print("Sales Data: ")
 print(df)
 
+# 1. Inspect the data
+
 print("\nFirst 5 rows: ")
 print(df.head())
 
@@ -16,6 +18,8 @@ print(df.dtypes)
 
 print("\nData information: ")
 print(df.info())
+
+# 2. Statistical Analysis
 
 print("Statistical Analysis:")
 
@@ -34,6 +38,8 @@ print(df[["Quantity","Price","Revenue"]].max())
 print("\nCount: ")
 print(df[["Quantity","Price","Revenue"]].count())
 
+# 3. Filter rows and select columns
+
 electronics_df = df[df["Category"] == "Electronics"]
 print("\nElectronics Products: ")
 print(electronics_df) 
@@ -41,6 +47,8 @@ print(electronics_df)
 selected_columns = df[["Product","Quantity","Revenue"]]
 print("\nSelected Columns: ")
 print(selected_columns)
+
+# 4. Slice a subset of rows
 
 subset_df = df.iloc[0:5]
 print("\nSubset of first 5 rows: ")
